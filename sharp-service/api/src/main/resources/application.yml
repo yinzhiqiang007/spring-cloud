@@ -1,4 +1,0 @@
-server:
-  servlet:
-    context-path: /quinn
-  port: 8081

@@ -1,4 +1,4 @@
-server:
-  servlet:
-    context-path: /quinn
-  port: 8081
+apollo:
+  bootstrap:
+    enabled: true
+    namespaces: application

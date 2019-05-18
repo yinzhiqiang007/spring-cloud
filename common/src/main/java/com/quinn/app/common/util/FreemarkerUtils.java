@@ -1,4 +1,4 @@
-package com.quinn.app.auth.common.util;
+package com.quinn.app.common.util;
 
 import freemarker.cache.StringTemplateLoader;
 import freemarker.template.Configuration;

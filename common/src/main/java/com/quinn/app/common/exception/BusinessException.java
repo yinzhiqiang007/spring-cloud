@@ -1,7 +1,7 @@
-package com.quinn.app.auth.common.exception;
+package com.quinn.app.common.exception;
 
 
-import com.quinn.app.auth.common.util.LogUtils;
+import com.quinn.app.common.util.LogUtils;
 
 public class BusinessException extends RuntimeException {
 

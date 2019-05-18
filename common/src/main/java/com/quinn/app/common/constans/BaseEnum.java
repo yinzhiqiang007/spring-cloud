@@ -1,4 +1,4 @@
-package com.quinn.app.auth.common.constans;
+package com.quinn.app.common.constans;
 
 /**
  * Created by yinzhiqiang on 2017/5/26.

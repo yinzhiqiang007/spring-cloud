@@ -1,11 +1,11 @@
-package com.quinn.app.auth.common.util;
+package com.quinn.app.common.util;
 
 import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import com.quinn.app.auth.common.constans.BaseEnum;
+import com.quinn.app.common.constans.BaseEnum;
 
 /**
  * 判断工具包

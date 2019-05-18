@@ -1,4 +1,4 @@
-package com.quinn.app.auth.common.constans;
+package com.quinn.app.common.constans;
 
 /**
  * @author Quinn

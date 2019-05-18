@@ -1,4 +1,4 @@
-package com.quinn.app.auth.common.util;
+package com.quinn.app.common.util;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

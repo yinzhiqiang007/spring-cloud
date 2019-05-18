@@ -1,4 +1,4 @@
-package com.quinn.app.auth.common.constans;
+package com.quinn.app.common.constans;
 
 public enum ResponseEnum {
 
@@ -38,12 +38,13 @@ public enum ResponseEnum {
         return result(null);
     }
 
-    public ResponseUtils result(Object data) {
-        ResponseUtils restResult = new ResponseUtils();
+    public <T> ResponseUtils result(T data) {
+        ResponseUtils<T> restResult = new ResponseUtils<>();
         restResult.setCode(this.name().replace("code_", ""));
         restResult.setMessage(this.message);
         restResult.setData(data);
         return restResult;
+
     }
 
 

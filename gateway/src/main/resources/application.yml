@@ -1,4 +1,4 @@
 server:
   servlet:
-    context-path: /quinn
+    context-path: /gateway
   port: 8081

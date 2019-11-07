@@ -2,3 +2,8 @@ server:
   servlet:
     context-path: /quinn
   port: 8082
+
+apollo:
+  bootstrap:
+    enabled: true
+    namespaces: "application,ys.sharp.config"

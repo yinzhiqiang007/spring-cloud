@@ -14,14 +14,6 @@
     <version>${service.version}</version>
 
     <dependencies>
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>dubbo</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.zookeeper</groupId>
-            <artifactId>zookeeper</artifactId>
-        </dependency>
 
         <dependency>
             <groupId>org.mybatis.spring.boot</groupId>

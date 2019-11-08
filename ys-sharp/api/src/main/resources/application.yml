@@ -1,9 +1,4 @@
-server:
-  servlet:
-    context-path: /quinn
-  port: 8082
-
 apollo:
   bootstrap:
     enabled: true
-    namespaces: "application,ys.sharp.config"
+    namespaces: "application,ys.sharp.config,ys.sharp.jdbc.common,ys.sharp.jdbc.master,ys.sharp.jdbc.slave_1"

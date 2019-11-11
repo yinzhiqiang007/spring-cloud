@@ -14,4 +14,6 @@ import com.quinn.app.sharp.entity.User;
 
 public interface UserMapper extends BaseMapper<User> {
 
+    public User getUserById(Long id );
+
 }

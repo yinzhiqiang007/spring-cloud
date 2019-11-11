@@ -26,6 +26,11 @@
             </exclusions>
         </dependency>
 
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus</artifactId>
+        </dependency>
+
 
         <!--spring boot tomcat plugin-->
         <dependency>
@@ -72,13 +77,15 @@
 
         <dependency>
             <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus</artifactId>
+            <artifactId>dynamic-datasource-spring-boot-starter</artifactId>
         </dependency>
 
         <dependency>
             <groupId>com.baomidou</groupId>
-            <artifactId>dynamic-datasource-spring-boot-starter</artifactId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+            <version>3.2.0</version>
         </dependency>
+
 
         <dependency>
             <groupId>com.baomidou</groupId>
@@ -97,6 +104,14 @@
             <artifactId>mysql-connector-java</artifactId>
             <version>8.0.16</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.8</version>
+            <scope>provided</scope>
+        </dependency>
+
 
 
 
@@ -127,60 +142,74 @@
         </profile>
     </profiles>
 
+
     <build>
-        <finalName>ys-sharp</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>com.quinn.app.sharp.SharpApplication</mainClass>
+                    <fork>true</fork>
                 </configuration>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>repackage</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-            <!-- 拷贝当前环境文件 -->
-            <plugin>
-                <artifactId>maven-resources-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <id>copy-resources</id>
-                        <phase>validate</phase>
-                        <goals>
-                            <goal>copy-resources</goal>
-                        </goals>
-                        <configuration>
-                            <outputDirectory>${project.build.directory}/classes/</outputDirectory>
-                            <resources>
-                                <resource>
-                                    <directory>src/main/resources/config/${env}</directory>
-                                    <filtering>true</filtering>
-                                </resource>
-                            </resources>
-                        </configuration>
-                    </execution>
-                </executions>
             </plugin>
         </plugins>
-        <!-- 过滤当前环境文件 -->
-        <resources>
-            <resource>
-                <directory>src/main/resources</directory>
-                <includes>
-                    <include>*.*</include>
-                    <include>templates/**</include>
-                    <include>META-INF/**</include>
-                    <!--<include>config/dev/*.properties</include>-->
-                    <!--<include>config/${env}/*.properties</include>-->
-                </includes>
-                <filtering>false</filtering>
-            </resource>
-        </resources>
-
     </build>
+
+    <!--<build>-->
+        <!--<finalName>ys-sharp</finalName>-->
+        <!--<plugins>-->
+            <!--<plugin>-->
+                <!--<groupId>org.springframework.boot</groupId>-->
+                <!--<artifactId>spring-boot-maven-plugin</artifactId>-->
+                <!--<configuration>-->
+                    <!--<mainClass>com.quinn.app.sharp.SharpApplication</mainClass>-->
+                <!--</configuration>-->
+                <!--<executions>-->
+                    <!--<execution>-->
+                        <!--<goals>-->
+                            <!--<goal>repackage</goal>-->
+                        <!--</goals>-->
+                    <!--</execution>-->
+                <!--</executions>-->
+            <!--</plugin>-->
+            <!--&lt;!&ndash; 拷贝当前环境文件 &ndash;&gt;-->
+            <!--<plugin>-->
+                <!--<artifactId>maven-resources-plugin</artifactId>-->
+                <!--<executions>-->
+                    <!--<execution>-->
+                        <!--<id>copy-resources</id>-->
+                        <!--<phase>validate</phase>-->
+                        <!--<goals>-->
+                            <!--<goal>copy-resources</goal>-->
+                        <!--</goals>-->
+                        <!--<configuration>-->
+                            <!--<outputDirectory>${project.build.directory}/classes/</outputDirectory>-->
+                            <!--<resources>-->
+                                <!--<resource>-->
+                                    <!--<directory>src/main/resources/config/${env}</directory>-->
+                                    <!--<filtering>true</filtering>-->
+                                <!--</resource>-->
+                            <!--</resources>-->
+                        <!--</configuration>-->
+                    <!--</execution>-->
+                <!--</executions>-->
+            <!--</plugin>-->
+        <!--</plugins>-->
+        <!--&lt;!&ndash; 过滤当前环境文件 &ndash;&gt;-->
+        <!--<resources>-->
+            <!--<resource>-->
+                <!--<directory>src/main/resources</directory>-->
+                <!--<includes>-->
+                    <!--<include>mapper/**</include>-->
+                    <!--<include>*.*</include>-->
+                    <!--<include>templates/**</include>-->
+                    <!--<include>META-INF/**</include>-->
+                    <!--&lt;!&ndash;<include>config/dev/*.properties</include>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<include>config/${env}/*.properties</include>&ndash;&gt;-->
+                <!--</includes>-->
+                <!--<filtering>false</filtering>-->
+            <!--</resource>-->
+        <!--</resources>-->
+
+    <!--</build>-->
 </project>

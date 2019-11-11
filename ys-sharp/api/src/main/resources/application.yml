@@ -2,3 +2,9 @@ apollo:
   bootstrap:
     enabled: true
     namespaces: "application,ys.sharp.config,ys.sharp.jdbc.common,ys.sharp.jdbc.master,ys.sharp.jdbc.slave_1"
+
+#
+#mybatis:
+#   mapper-locations: classpath:mapper/*.xml
+#mybatis-plus:
+#  mapper-locations: classpath:mapper/*.xml

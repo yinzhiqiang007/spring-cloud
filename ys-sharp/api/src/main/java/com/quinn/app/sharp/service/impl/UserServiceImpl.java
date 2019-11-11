@@ -4,6 +4,7 @@ import com.quinn.app.sharp.entity.User;
 import com.quinn.app.sharp.mapper.UserMapper;
 import com.quinn.app.sharp.service.IUserService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -19,8 +20,16 @@ import java.util.List;
 @Service
 public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IUserService {
 
+    @Autowired
+    private UserMapper userMapper;
+
     public List<User> getUser(){
         return this.baseMapper.selectList(null);
+    }
+
+    @Override
+    public User getUserById(Long id) {
+        return userMapper.getUserById(id);
     }
 
 }

@@ -12,7 +12,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * @author yinzhiqiang
  * @since 2019-11-11
  */
-@DS("slave_1")
+
 public interface IUserInfoService extends IService<UserInfo> {
 
 }

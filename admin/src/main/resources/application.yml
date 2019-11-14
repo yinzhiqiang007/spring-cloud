@@ -3,12 +3,12 @@ server:
 
 spring:
   application:
-    name: admin-server
+    name: ys-admin
   boot:
     admin:
       notify:
         mail:
-          enabled: true
+          enabled: false #false：关闭发送邮件，true：发送邮件
           from: 15216880849@qq.com
           ignore-changes: UNKNOWN:UP,UNKNOWN:OFFLINE,OFFLINE:UP
           to: 15216880849@qq.com

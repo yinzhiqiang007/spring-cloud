@@ -1,0 +1,29 @@
+server:
+  port: 8083
+
+spring:
+  application:
+    name: admin-server
+  boot:
+    admin:
+      notify:
+        mail:
+          enabled: true
+          from: 15216880849@qq.com
+          ignore-changes: UNKNOWN:UP,UNKNOWN:OFFLINE,OFFLINE:UP
+          to: 15216880849@qq.com
+  mail:
+    host: smtp.qq.com
+    username: 15216880849@qq.com
+    password: 'tikkledodoprjeih'
+    properties:
+      mail:
+        smtp:
+          auth: true
+          ssl:
+            enable: true
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://39.105.158.174:7001/eureka

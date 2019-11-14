@@ -2,12 +2,12 @@ package com.quinn.app.gateway.config;
 
 
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-//import org.springframework.cloud.gateway.route.RouteLocator;
-//import org.springframework.cloud.gateway.route.builder.RouteLocatorBuilder;
+import org.springframework.cloud.gateway.route.RouteLocator;
+import org.springframework.cloud.gateway.route.builder.RouteLocatorBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-//@Configuration
+@Configuration
 public class GatewayRoutes {
 
 //    @Bean

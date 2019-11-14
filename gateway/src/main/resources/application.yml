@@ -1,4 +1,16 @@
 server:
-  servlet:
-    context-path: /gateway
   port: 8081
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: neo_route
+          uri: http://www.163.com
+          predicates:
+            - Path=/spring-cloud
+        - id: neo_route1
+          uri: http://localhost:8082
+          predicates:
+            - Path=/ddd
+          filters:
+            - StripPrefix= 1

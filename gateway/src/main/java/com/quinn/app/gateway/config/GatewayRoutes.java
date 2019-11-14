@@ -10,15 +10,15 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class GatewayRoutes {
 
-//    @Bean
-//    public RouteLocator routeLocator(RouteLocatorBuilder builder) {
-//        return builder.routes()
-//                .route(r ->
-//                        r.path("/quinn/**")
-//                                .filters(
-//                                        f -> f.stripPrefix(1)
-//                                ).uri("http://localhost:8082/quinn")
-//                )
-//                .build();
-//    }
+    @Bean
+    public RouteLocator routeLocator(RouteLocatorBuilder builder) {
+        return builder.routes()
+                .route(r ->
+                        r.path("/quinn/**")
+                                .filters(
+                                        f -> f.stripPrefix(1)
+                                ).uri("lb://ys-sharp")
+                )
+                .build();
+    }
 }

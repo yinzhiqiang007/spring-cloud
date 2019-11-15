@@ -5,6 +5,7 @@ import com.alibaba.fastjson.JSON;
 import com.ctrip.framework.apollo.Config;
 import com.ctrip.framework.apollo.spring.annotation.ApolloConfig;
 import com.quinn.app.sharp.entity.User;
+import com.quinn.app.sharp.redis.IRedisService;
 import com.quinn.app.sharp.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -34,11 +35,14 @@ public class UserController extends BaseController {
     @ApolloConfig
     private Config config;
 
+    @Autowired
+    private IRedisService systemConfigRedisService;
 
 
     @RequestMapping("getUser")
 
     public Object getUser(){
+        systemConfigRedisService.setStr("ddddd","ddddddddddddddddddd",200);
 
         Set<String> stringSet =  config.getPropertyNames();
         stringSet.stream().forEach(a ->{

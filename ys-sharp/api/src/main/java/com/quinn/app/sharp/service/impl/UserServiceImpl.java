@@ -1,5 +1,7 @@
 package com.quinn.app.sharp.service.impl;
 
+import com.quinn.app.common.constans.ResponseData;
+import com.quinn.app.common.constans.ResponseEnum;
 import com.quinn.app.sharp.entity.User;
 import com.quinn.app.sharp.mapper.UserMapper;
 import com.quinn.app.sharp.service.IUserService;
@@ -23,13 +25,13 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
     @Autowired
     private UserMapper userMapper;
 
-    public List<User> getUser(){
-        return this.baseMapper.selectList(null);
+    public ResponseData getUser(){
+        return ResponseEnum.code_000000.result(this.baseMapper.selectList(null));
     }
 
     @Override
-    public User getUserById(Long id) {
-        return userMapper.getUserById(id);
+    public ResponseData getUserById(Long id) {
+        return ResponseEnum.code_000000.result(userMapper.getUserById(id));
     }
 
 }

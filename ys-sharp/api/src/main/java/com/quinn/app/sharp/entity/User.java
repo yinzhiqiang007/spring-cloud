@@ -13,7 +13,7 @@ import lombok.experimental.Accessors;
  * </p>
  *
  * @author yinzhiqiang
- * @since 2019-11-11
+ * @since 2019-11-18
  */
 @Data
 @EqualsAndHashCode(callSuper = true)
@@ -28,6 +28,8 @@ public class User extends BaseEntity {
     private byte[] nickName;
 
     private LocalDateTime createTime;
+
+    private String address;
 
 
 }

@@ -4,6 +4,7 @@ package com.quinn.app.sharp.controller;
 import com.alibaba.fastjson.JSON;
 import com.ctrip.framework.apollo.Config;
 import com.ctrip.framework.apollo.spring.annotation.ApolloConfig;
+import com.quinn.app.common.constans.ResponseData;
 import com.quinn.app.sharp.entity.User;
 import com.quinn.app.sharp.redis.IRedisService;
 import com.quinn.app.sharp.service.IUserService;
@@ -57,7 +58,7 @@ public class UserController extends BaseController {
         System.out.println(s);
         System.out.println(s2);
         System.out.println(s4);
-        User user = this.userService.getUserById(1l);
+        ResponseData user = this.userService.getUserById(1l);
         System.out.println(JSON.toJSONString(user));
 
 

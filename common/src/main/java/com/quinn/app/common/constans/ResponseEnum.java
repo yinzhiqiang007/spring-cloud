@@ -34,13 +34,13 @@ public enum ResponseEnum {
         this.message = message;
     }
 
-    public ResponseUtils result() {
+    public ResponseData result() {
         return result(null);
     }
 
-    public <T> ResponseUtils result(T data) {
-        ResponseUtils<T> restResult = new ResponseUtils<>();
-        restResult.setCode(this.name().replace("code_", ""));
+    public <T> ResponseData result(T data) {
+        ResponseData<T> restResult = new ResponseData<>();
+        restResult.setCode(this.name().substring(5));
         restResult.setMessage(this.message);
         restResult.setData(data);
         return restResult;

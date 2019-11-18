@@ -43,7 +43,10 @@ public class Generator {
         GlobalConfig gc = new GlobalConfig();
         gc.setFileOverride(true);
         String projectPath = System.getProperty("user.dir");
-        gc.setOutputDir(projectPath + "/ys-sharp/api/src/main/java");
+//        String filePath =projectPath +"/ys-sharp/api";
+        String filePath =projectPath +"";
+        System.out.println(filePath);
+        gc.setOutputDir(filePath + "/src/main/java");
         gc.setAuthor("yinzhiqiang");
         gc.setOpen(false);
 
@@ -52,7 +55,7 @@ public class Generator {
 
         // 数据源配置
         DataSourceConfig dsc = new DataSourceConfig();
-        dsc.setUrl("jdbc:mysql://39.105.158.174:3306/gogo?useUnicode=true&useSSL=false&characterEncoding=utf8");
+        dsc.setUrl("jdbc:mysql://39.105.158.174:3306/sharp?useUnicode=true&useSSL=false&characterEncoding=utf8");
         // dsc.setSchemaName("public");
         dsc.setDriverName("com.mysql.cj.jdbc.Driver");
         dsc.setUsername("root");
@@ -86,7 +89,7 @@ public class Generator {
             @Override
             public String outputFile(TableInfo tableInfo) {
                 // 自定义输出文件名 ， 如果你 Entity 设置了前后缀、此处注意 xml 的名称会跟着发生变化！！
-                return projectPath + "/ys-sharp/api/src/main/resources/mapper/"
+                return filePath + "/src/main/resources/mapper/"
                         + tableInfo.getEntityName() + "Mapper" + StringPool.DOT_XML;
             }
         });

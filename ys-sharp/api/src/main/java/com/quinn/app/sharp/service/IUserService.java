@@ -1,5 +1,6 @@
 package com.quinn.app.sharp.service;
 
+import com.quinn.app.common.constans.ResponseData;
 import com.quinn.app.sharp.entity.User;
 import com.baomidou.mybatisplus.extension.service.IService;
 
@@ -15,7 +16,7 @@ import java.util.List;
  */
 public interface IUserService extends IService<User> {
 
-    public List<User> getUser();
-    public User getUserById(Long id );
+    ResponseData getUser();
+    ResponseData getUserById(Long id );
 
 }

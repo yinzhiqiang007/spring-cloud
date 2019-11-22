@@ -1,0 +1,13 @@
+spring:
+  cloud:
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848
+        namespace: cde87611-6ef1-42ca-a8c3-be7fd4232560
+        ext-config:
+        - data-id: ys-sharp.properties
+          refresh: true
+        - data-id: redis.properties
+          refresh: true
+        - data-id: config.properties
+          refresh: true

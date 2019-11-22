@@ -39,10 +39,28 @@ public class UserController extends BaseController {
     @Autowired
     private IRedisService systemConfigRedisService;
 
+    @Value("${spring.datasource.dynamic.datasource.master.password:false}")
+    private String useLocalCache;
+
+    @Value("${ys.sharp.jdbc.ip:false}")
+    private String useLocalCacheIp;
+
+    @Value("${test1:false}")
+    private String test1;
+
+    @Value("${ys.sharp.jdbc.test2:false}")
+    private String test2;
+
+    @Value("${ys.sharp.jdbc.test3:false}")
+    private String test3;
 
     @RequestMapping("getUser")
-
     public Object getUser(){
+
+        System.out.println(useLocalCache);
+        System.out.println(test1);
+        System.out.println(test2);
+        System.out.println(test3);
         systemConfigRedisService.setStr("ddddd","ddddddddddddddddddd",200);
 
         Set<String> stringSet =  config.getPropertyNames();

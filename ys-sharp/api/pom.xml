@@ -24,6 +24,12 @@
             <artifactId>mybatis-plus</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>com.quinn.app</groupId>
+            <artifactId>microservice</artifactId>
+            <version>${service.version}</version>
+        </dependency>
+
 
 
         <!--配置servlet-->
@@ -149,6 +155,30 @@
             <!--<version>0.2.3</version>-->
         <!--</dependency>-->
 
+        <!--<dependency>-->
+            <!--<groupId>com.amazonaws</groupId>-->
+            <!--<artifactId>aws-java-sdk-s3</artifactId>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>com.amazonaws</groupId>-->
+            <!--<artifactId>aws-java-sdk-dynamodb</artifactId>-->
+        <!--</dependency>-->
+
+        <dependency>
+            <groupId>com.amazonaws</groupId>
+            <artifactId>aws-java-sdk</artifactId>
+            <version>1.11.681</version>
+        </dependency>
+        <dependency>
+            <groupId>com.amazonaws</groupId>
+            <artifactId>aws-java-sdk-core</artifactId>
+            <version>1.11.681</version>
+        </dependency>
+        <dependency>
+            <groupId>com.amazonaws</groupId>
+            <artifactId>aws-java-sdk-s3</artifactId>
+            <version>1.11.681</version>
+        </dependency>
 
 
     </dependencies>

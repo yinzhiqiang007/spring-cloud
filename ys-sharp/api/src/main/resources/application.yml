@@ -3,10 +3,10 @@
 #    enabled: true
 #    namespaces: "application,ys.sharp.config,ys.sharp.jdbc.common,ys.sharp.jdbc.master,ys.sharp.jdbc.slave_1,ys.sharp.redis"
 
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:7001/eureka
+#eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: http://localhost:7001/eureka
 
 #management:
 #  endpoints:

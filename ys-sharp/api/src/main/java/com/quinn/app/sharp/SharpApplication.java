@@ -17,6 +17,7 @@ import org.springframework.context.annotation.ComponentScan;
 public class SharpApplication {
 
     public static void main(String[] args) {
+        System.setProperty("spring.cloud.nacos.config.namespace","082d82fe-e42f-44d4-ab3c-4dc888a784d3");
         ConfigurableApplicationContext applicationContext = SpringApplication.run(SharpApplication.class, args);
         String userName = applicationContext.getEnvironment().getProperty("ys.sharp.jdbc.test2");
         String userAge = applicationContext.getEnvironment().getProperty("ys.sharp.jdbc.test3");

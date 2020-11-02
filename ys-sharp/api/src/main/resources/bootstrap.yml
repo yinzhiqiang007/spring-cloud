@@ -3,7 +3,7 @@ spring:
     nacos:
       config:
         server-addr: 39.105.158.174:8848
-        namespace: cde87611-6ef1-42ca-a8c3-be7fd4232560
+#        namespace: 082d82fe-e42f-44d4-ab3c-4dc888a784d3
         ext-config:
         - data-id: ys-sharp.properties
           refresh: true

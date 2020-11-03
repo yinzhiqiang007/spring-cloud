@@ -3,10 +3,9 @@ spring:
     nacos:
       config:
         file-extension: properties
-        prefix: ys
         server-addr: 39.105.158.174:8848
-#        namespace: 082d82fe-e42f-44d4-ab3c-4dc888a784d3
-        ext-config:
+        namespace: 082d82fe-e42f-44d4-ab3c-4dc888a784d3
+        shared-configs:
         - data-id: ys-sharp.properties
           refresh: true
           group: DEFAULT_GROUP
@@ -16,4 +15,6 @@ spring:
         - data-id: config.properties
           refresh: true
           group: DEFAULT_GROUP
+
+
 
